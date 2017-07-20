@@ -1,7 +1,7 @@
 # datavisfun
 _A data visualization exercise using d3.js_
 
-This repository holds the content for a Node.js app and Express app, that serves static content is deployed in heroku: https://gentle-chamber-33673.herokuapp.com/
+This repository holds the content for a Node.js app and Express app, that serves static content is deployed in [heroku](https://datavisfun.herokuapp.com/)
 
 This app loads data from the following [API endpoint](https://dcc.icgc.org/api/v1/projects/GBM-US/mutations?field=id,mutation,type,chromosome,start,end&size=100&order=desc).
 This data returns mutation data for the Glioblastoma multiforme project (GBM-US).
@@ -9,7 +9,7 @@ This data returns mutation data for the Glioblastoma multiforme project (GBM-US)
 The details of the task to complete can be found [here](https://gist.github.com/alexsb/3728d3ee1c340fbd8b23dd38dfbfe201).
 
 The following is a diagram of the proposed data flow for this project:
-![data flow](https://github.com/arocho/datavisfun/public/images/diagram.png "data flow")
+![data flow](https://github.com/arocho/datavisfun/blob/master/public/images/diagram.png")
 
 At start, an API request is sent, and JSON data is obtained, then the rest of the javascript snippets are queued up and loaded.
 
