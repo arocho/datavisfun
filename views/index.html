@@ -5,10 +5,33 @@
 </head>
 <body>
     <h1>They see me graphing</h1>
-    <div class="chart"></div>
+    <svg class="barchart"></svg>
+    <svg class="scatter"></svg>
+
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://d3js.org/d3-selection.v1.js"></script>
-    <script src="/javascripts/bars.js"></script>
-    <script src="/javascripts/scatterplot.js"></script>
+    <script type="text/javascript">
+        var GBMUS_SERVER = 'https://dcc.icgc.org';
+        var GBMUS_PATH = '/api/v1/projects/GBM-US/mutations';
+        var GBMUS_PARAMS = '?field=id,mutation,type,chromosome,start,end&size=100&order=desc'
+
+        var dataObj = new Object();
+
+        d3.json(GBMUS_SERVER + GBMUS_PATH + GBMUS_PARAMS, gotData);
+
+        function gotData(data) {
+            dataObj.all_data = data.hits;
+            console.log(dataObj.all_data);
+            [
+                '/javascripts/process-data.js',
+                '/javascripts/bars.js'
+                //'/javascripts/scatterplot.js'
+            ].forEach(function (src) {
+                var script = document.createElement('script');
+                script.src = src;
+                script.async = false;
+                document.head.appendChild(script);
+            });
+        }
+    </script>
 </body>
 </html> 

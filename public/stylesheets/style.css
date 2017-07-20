@@ -11,11 +11,44 @@ body {
   background: #fff;
   padding: 20px;
 }
-.chart div {
-  font: 10px sans-serif;
+
+/*BAR CHART*/
+.bars {
   background-color: steelblue;
-  text-align: right;
   padding: 3px;
   margin: 1px;
   color: white;
 }
+.bar {
+  fill: darkturquoise;
+}
+
+.bar:hover {
+  fill: brown;
+}
+
+.title {
+  font: bold 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.axis {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+
+
+
+
+
+
