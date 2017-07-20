@@ -1,9 +1,9 @@
 {
-  "name": "index",
+  "name": "datavisfun",
   "version": "1.0.0",
   "description": "App that visualizes data obtained from an API",
   "scripts": {
-    "start": "node process-data.js",
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,8 +19,11 @@
   "author": "Allison Arocho",
   "license": "ISC",
   "dependencies": {
-    "d3": "4.10.0",
+    "body-parser": "1.17.1",
+    "cookie-parser": "1.4.3",
+    "debug": "2.6.3",
     "express": "4.15.2",
-    "request": "2.81.0"
+    "morgan": "1.8.1",
+    "serve-favicon": "2.4.2"
   }
 }
